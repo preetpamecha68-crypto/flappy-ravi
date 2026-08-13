@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Kishan Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="startScreen" class="screen">
+            <h1>🐦 RAVI KISHAN</h1>
+            <h2>FLAPPY BIRD</h2>
+            <p>Tap / Click / Press SPACE</p>
+            <button id="startButton">START GAME</button>
+        </div>
+
+        <div id="gameOverScreen" class="screen hidden">
+            <h1>GAME OVER 💀</h1>
+
+            <p id="finalScore">Score: 0</p>
+            <p id="bestScore">Best: 0</p>
+
+            <div id="deathMessage"></div>
+
+            <button id="restartButton">PLAY AGAIN</button>
+        </div>
+
+        <div id="score">0</div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
