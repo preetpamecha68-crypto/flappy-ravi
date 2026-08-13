@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    position: relative;
+    width: min(100vw, 450px);
+    height: min(100vh, 800px);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+
+    z-index: 10;
+}
+
+.screen h1 {
+    font-size: 42px;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 5px;
+}
+
+.screen h2 {
+    font-size: 27px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+
+    background: #ffcc00;
+    color: #111;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #b38f00;
+
+    transition: 0.1s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#score {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+
+    text-shadow:
+        4px 4px 0 #000,
+        -2px -2px 0 #000;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+#deathMessage {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 25px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+@media (max-width: 500px) {
+
+    .game-container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .screen h1 {
+        font-size: 34px;
+    }
+
+    .screen h2 {
+        font-size: 23px;
+    }
+
+    #score {
+        font-size: 50px;
+    }
+}
